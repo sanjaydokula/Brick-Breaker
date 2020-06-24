@@ -11,6 +11,7 @@ public class PaddleControl : MonoBehaviour
     public float rightEdge;
     [SerializeField]
     private float speed = 5.0f;
+    [SerializeField]
     private int lives = 3;
     void Start()
     {
@@ -46,6 +47,15 @@ public class PaddleControl : MonoBehaviour
         else
         {
             transform.position = new Vector2(0.0f, transform.position.y);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Life"))
+        {
+            lives++;
+            Destroy(collision.gameObject);
         }
     }
 }

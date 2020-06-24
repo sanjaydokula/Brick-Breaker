@@ -252,6 +252,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &62204909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -557,6 +560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &251369212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -703,6 +709,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &307211982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -906,6 +915,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &375241652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1052,6 +1064,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &395178673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1280,6 +1295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &538020942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1426,6 +1444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &787370109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1572,6 +1593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &807221492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1718,6 +1742,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &855063399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1864,6 +1891,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &877867509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -1968,6 +1998,7 @@ MonoBehaviour:
   leftEdge: 0
   rightEdge: 0
   speed: 7
+  lives: 3
 --- !u!50 &1075244116
 Rigidbody2D:
   serializedVersion: 4
@@ -2161,6 +2192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &1147098287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -2364,6 +2398,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &1303397986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -2550,8 +2587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPos: {fileID: 1662740113}
-  crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
-    type: 3}
 --- !u!1001 &1658840785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2692,6 +2727,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &1658840789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -2925,6 +2963,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &1714765148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -3071,6 +3112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &1808965996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -3353,6 +3397,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &2060801738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -3499,6 +3546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &2085063687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
@@ -3551,6 +3601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
     type: 3}
+  powerPrefab: {fileID: 3362270068829833705, guid: f4d3d288f45a82947b4965c467e75e49,
+    type: 3}
+  health: 2
 --- !u!4 &2102162843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561545651896254078, guid: 00b6910aa70b9704da84e9b7eb030e1f,
