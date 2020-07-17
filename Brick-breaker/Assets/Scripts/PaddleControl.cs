@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PaddleControl : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody2D rigidbody;
+    private BallBehaviour ball;
+    private Rigidbody2D ballRigidBody;
     public float leftEdge;
     public float rightEdge;
     [SerializeField]
@@ -16,6 +16,9 @@ public class PaddleControl : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallBehaviour>();
+        ballRigidBody = ball.GetComponent<Rigidbody2D>();
+
         leftEdge = -9.73f;
         rightEdge = 9.73f;
     }
@@ -23,8 +26,25 @@ public class PaddleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.isPaused == true)
+        {
+            ballRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+            return;
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         rigidbody.velocity = new Vector2(horizontal * speed, rigidbody.velocity.y);
+        if (ball.inPlay == false)
+        {
+            if (transform.position.x < -7.68f)
+            {
+                transform.position = new Vector2(-7.68f, transform.position.y);
+            }
+            else if (transform.position.x > 7.64f)
+            {
+                transform.position = new Vector2(7.64f, transform.position.y);
+            }
+        }
         if (transform.position.x < leftEdge)
         {
             transform.position = new Vector2(rightEdge, transform.position.y);
@@ -33,6 +53,11 @@ public class PaddleControl : MonoBehaviour
         {
             transform.position = new Vector2(leftEdge, transform.position.y);
         }
+
+        /* if (Input.GetKeyDown(KeyCode.N))
+         {
+             SceneManager.LoadScene(1);
+         }*/
     }
     /*
      * This method 
@@ -40,6 +65,7 @@ public class PaddleControl : MonoBehaviour
     public void Reset()
     {
         --lives;
+        GameManager.Instance.UpdateLives(lives);
         if (lives == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -54,7 +80,11 @@ public class PaddleControl : MonoBehaviour
     {
         if (collision.CompareTag("Life"))
         {
-            lives++;
+            if (lives < 3)
+            {
+                lives++;
+                GameManager.Instance.UpdateLives(lives);
+            }
             Destroy(collision.gameObject);
         }
     }

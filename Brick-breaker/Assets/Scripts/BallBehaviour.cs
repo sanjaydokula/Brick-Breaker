@@ -7,9 +7,12 @@ public class BallBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private PaddleControl paddle;
     private Rigidbody2D rigidbody;
-    private bool inPlay = false;
+    public bool inPlay = false;
     public Transform ballPos;
     //private BrickBheaviour brick;
+    public float MinimumSpeed = 4.0f;
+    public float MaximumSpeed = 6.5f;
+
 
     void Start()
     {
@@ -28,12 +31,38 @@ public class BallBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && inPlay == false)
         {
             //Debug.Log("jump!");
-            rigidbody.AddForce(Vector2.up * 400);
+            rigidbody.AddForce(Vector2.up * 350);
             inPlay = true;
         }
-        if (transform.position.y > 4.997)
+        /*  if (transform.position.y > 4.997)
+          {
+              transform.position = new Vector2(rigidbody.velocity.x, -5.56f);
+          }*/
+
+        Vector2 vel = rigidbody.velocity;
+        Vector2 maxvel = new Vector2(10.0f, 10.0f);
+        Vector2 minvel = new Vector2(8.0f, 8.0f);
+        Vector2 direction = rigidbody.velocity;
+        if (direction.y > 0)
         {
-            transform.position = new Vector2(rigidbody.velocity.x, -5.56f);
+
+            if (vel.x > maxvel.x || vel.y > maxvel.y)
+            {
+                Debug.Log("max reached.");
+                Debug.Log(vel);
+                rigidbody.velocity = vel * 0.8f;
+            }
+        }
+        if (direction.y < 0)
+        {
+            if ( vel.y < -minvel.y)
+            {
+
+                Debug.Log("minimum reached.");
+                Debug.Log(vel);
+                //rigidbody.velocity = new Vector2(vel.x,vel.y * 0.8f);
+                rigidbody.velocity = vel * 0.8f;
+            }
         }
 
     }
@@ -55,11 +84,11 @@ public class BallBehaviour : MonoBehaviour
         {
             //Debug.Log("hit: " + other.gameObject.name);
             IDamgeable hit = other.gameObject.GetComponent<IDamgeable>();
-            if(hit!= null)
+            if (hit != null)
             {
                 hit.Damage();
             }
-          
+
         }
     }
 }

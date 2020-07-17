@@ -22,11 +22,14 @@ public class BrickBheaviour : MonoBehaviour, IDamgeable
         if (Health == 1)
         {
             Destroy(gameObject);
+            GameManager.Instance.UpdateScore();
+            GameManager.Instance.UpdateBricks();
             GameObject prefab = Instantiate(crumblePrefab, transform.position, transform.rotation) as GameObject;
             Destroy(prefab, 2.0f);
             float rand = Random.value * 10;
-            if (rand < 2)
+            if (rand < 1)
             {
+                Debug.Log("Drop.");
                 int randi = (int)rand;
                 Drop(randi);
             }
@@ -34,6 +37,7 @@ public class BrickBheaviour : MonoBehaviour, IDamgeable
         else
         {
             Health--;
+            Debug.Log(Health);
         }
     }
 
@@ -41,6 +45,7 @@ public class BrickBheaviour : MonoBehaviour, IDamgeable
     {
        // float i = Random.value*3
         GameObject prefab = Instantiate(powerPrefab, transform.position, Quaternion.identity) as GameObject;
+        Destroy(prefab, 10.0f);
         prefab.GetComponent<Rigidbody2D>().AddForce(Vector2.down * 50.0f);
 
     }
