@@ -10,7 +10,7 @@ public class PaddleControl : MonoBehaviour
     public float leftEdge;
     public float rightEdge;
     [SerializeField]
-    private float speed = 5.0f;
+    private float speed;
     [SerializeField]
     private int lives = 3;
     void Start()
@@ -68,7 +68,8 @@ public class PaddleControl : MonoBehaviour
         GameManager.Instance.UpdateLives(lives);
         if (lives == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //PlayerPrefs.SetInt("highscore", int.Parse(GameManager.Instance.highscore.ToString()));
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {

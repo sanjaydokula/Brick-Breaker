@@ -10,8 +10,7 @@ public class BallBehaviour : MonoBehaviour
     public bool inPlay = false;
     public Transform ballPos;
     //private BrickBheaviour brick;
-    public float MinimumSpeed = 4.0f;
-    public float MaximumSpeed = 6.5f;
+   
 
 
     void Start()

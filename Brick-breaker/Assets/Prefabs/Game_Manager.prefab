@@ -43,4 +43,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f95ea4b5410dd140b634b0001771bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pan: {fileID: 0}
+  playagain: {fileID: 0}
+  backtomenu: {fileID: 0}
+  bricknum: 0
+  gameover: {fileID: 0}
+  isPaused: 0
+  score: 0
+  scoreText: {fileID: 0}
+  highscore: {fileID: 0}
+  hearts: []
+  spwanPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  planet:
+  - {fileID: 8983935466446399210, guid: 1d229c0272c9fc343b657be5c2bf684a, type: 3}
+  - {fileID: 7058360689690611223, guid: 4a459c2f31b777748a2d3b968c683f20, type: 3}
+  - {fileID: 8745850169534274736, guid: 9b643a776e537764bb4c1e3b4d3cbee9, type: 3}
+  - {fileID: 8810517353348285837, guid: 237c3098cc6e5774ebf49bb4a2898d92, type: 3}
+  - {fileID: 5682796463383634873, guid: 517428dfba04160469e87fa686833d55, type: 3}
+  - {fileID: 7065719277773520532, guid: 058eeb23fb82adc47a1600cf7f65cc96, type: 3}
+  - {fileID: 1203278440679763688, guid: daf647d6c7b768b489be4b6cc658b63a, type: 3}
+  - {fileID: 7850309585651190272, guid: 01cec15c43103c84dbdaad45bb4d5fa6, type: 3}
