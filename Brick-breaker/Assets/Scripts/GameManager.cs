@@ -111,7 +111,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreText.enabled = true;
         score += 10;
         //PlayerPrefs.SetInt("score", score);
         scoreText.text = "SCORE " + score.ToString();

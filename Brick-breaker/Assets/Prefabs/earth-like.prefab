@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8810517353348285839}
   - component: {fileID: 8810517353348285838}
-  - component: {fileID: 8810517353348285824}
   - component: {fileID: 8810517353348285825}
+  - component: {fileID: 114807054990374848}
   m_Layer: 0
   m_Name: earth-like
   m_TagString: Brick
@@ -81,22 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8810517353348285824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8810517353348285837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3708d071983f9044ab86c0d0d057fb77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
-    type: 3}
-  powerPrefab: {fileID: 0}
-  health: 1
 --- !u!58 &8810517353348285825
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,3 +97,17 @@ CircleCollider2D:
   m_Offset: {x: 0.10904133, y: 0.07269412}
   serializedVersion: 2
   m_Radius: 3.6522987
+--- !u!114 &114807054990374848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810517353348285837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3708d071983f9044ab86c0d0d057fb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crumblePrefab: {fileID: 3575371186736512765, guid: b52c25e38d5363548b04ecb5d0a0dd6f,
+    type: 3}

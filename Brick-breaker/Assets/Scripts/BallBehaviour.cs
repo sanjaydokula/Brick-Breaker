@@ -10,7 +10,7 @@ public class BallBehaviour : MonoBehaviour
     public bool inPlay = false;
     public Transform ballPos;
     //private BrickBheaviour brick;
-   
+
 
 
     void Start()
@@ -42,19 +42,19 @@ public class BallBehaviour : MonoBehaviour
         Vector2 maxvel = new Vector2(10.0f, 10.0f);
         Vector2 minvel = new Vector2(8.0f, 8.0f);
         Vector2 direction = rigidbody.velocity;
+        Debug.Log(vel);
         if (direction.y > 0)
         {
 
             if (vel.x > maxvel.x || vel.y > maxvel.y)
             {
                 Debug.Log("max reached.");
-                Debug.Log(vel);
                 rigidbody.velocity = vel * 0.8f;
             }
         }
         if (direction.y < 0)
         {
-            if ( vel.y < -minvel.y)
+            if (vel.y < -minvel.y)
             {
 
                 Debug.Log("minimum reached.");
@@ -62,6 +62,10 @@ public class BallBehaviour : MonoBehaviour
                 //rigidbody.velocity = new Vector2(vel.x,vel.y * 0.8f);
                 rigidbody.velocity = vel * 0.8f;
             }
+            /*if (vel.x < minvel.x)
+            {
+                rigidbody.AddForce(Vector2.down * 4.0f);
+            }*/
         }
 
     }
@@ -82,6 +86,7 @@ public class BallBehaviour : MonoBehaviour
         if (other.transform.CompareTag("Brick"))
         {
             //Debug.Log("hit: " + other.gameObject.name);
+
             IDamgeable hit = other.gameObject.GetComponent<IDamgeable>();
             if (hit != null)
             {

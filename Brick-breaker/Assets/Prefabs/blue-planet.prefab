@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7058360689690611221}
   - component: {fileID: 7058360689690611220}
   - component: {fileID: 7058360689690611227}
-  - component: {fileID: 114676731594412472}
+  - component: {fileID: 114774968455389220}
   m_Layer: 0
   m_Name: blue-planet
   m_TagString: Brick
@@ -97,7 +97,7 @@ CircleCollider2D:
   m_Offset: {x: 0.09437179, y: 0}
   serializedVersion: 2
   m_Radius: 3.9542103
---- !u!114 &114676731594412472
+--- !u!114 &114774968455389220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3708d071983f9044ab86c0d0d057fb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crumblePrefab: {fileID: 5578972183798289878, guid: 55f5fda9ba7926748bfa61dc536659f6,
+  crumblePrefab: {fileID: 3575371186736512765, guid: b52c25e38d5363548b04ecb5d0a0dd6f,
     type: 3}
-  powerPrefab: {fileID: 0}
-  health: 1

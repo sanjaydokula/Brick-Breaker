@@ -10,7 +10,7 @@ public class PaddleControl : MonoBehaviour
     public float leftEdge;
     public float rightEdge;
     [SerializeField]
-    private float speed;
+    private float speed=10;
     [SerializeField]
     private int lives = 3;
     void Start()
@@ -32,8 +32,12 @@ public class PaddleControl : MonoBehaviour
             return;
         }
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        rigidbody.velocity = new Vector2(horizontal * speed, rigidbody.velocity.y);
+        if (GameManager.Instance.gameover.activeSelf == false)
+        {
+
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            rigidbody.velocity = new Vector2(horizontal * speed, rigidbody.velocity.y);
+        }
         if (ball.inPlay == false)
         {
             if (transform.position.x < -7.68f)
@@ -68,8 +72,7 @@ public class PaddleControl : MonoBehaviour
         GameManager.Instance.UpdateLives(lives);
         if (lives == 0)
         {
-            //PlayerPrefs.SetInt("highscore", int.Parse(GameManager.Instance.highscore.ToString()));
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ball.inPlay = false;
         }
         else
         {
