@@ -20,6 +20,14 @@ public class BallBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void Begin()
+    {
+        if(inPlay == false)
+        {
+            rigidbody.AddForce(Vector2.up * 350);
+            inPlay = true;
+        }
+    }
     void Update()
     {
 

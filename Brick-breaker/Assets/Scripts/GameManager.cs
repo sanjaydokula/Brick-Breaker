@@ -8,12 +8,26 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private static GameManager _instance;
-    public GameObject playagain, backtomenu;
+    private Accel accel;
+    private PaddleControl paddleControl;
+
+    public GameObject playagain, backtomenu, pause, options;
     public GameObject gameover;
+
+    public Button left, right, start;
+
+
     public bool isPaused = false;
     public int score = 0;
+    private float duration = 10.0f;
+    private float elapsedTime;
+
+
     public Text scoreText;
     public Text highScoreText;
+    private Text startText;
+    public Button startButton;
+
     public Image[] hearts;
     public Transform[] spwanPoints;
     public GameObject[] planet;
@@ -31,7 +45,30 @@ public class GameManager : MonoBehaviour
     }
     public void Start()
     {
-       highScoreText.text ="HighScore" +"\n" +  PlayerPrefs.GetInt("highscores",0).ToString();
+        highScoreText.text = "HighScore" + "\n" + PlayerPrefs.GetInt("highscores", 0).ToString();
+        accel = GameObject.FindGameObjectWithTag("Player").GetComponent<Accel>();
+        paddleControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PaddleControl>();
+        startText = start.GetComponentInChildren<Text>();
+
+        paddleControl.enabled = true;
+        accel.enabled = false;
+
+    }
+    private void Update()
+    {
+        if (Time.time > 8.0f)
+        {
+
+            if (elapsedTime < duration)
+            {
+
+                left.image.color = Color32.Lerp(left.image.color, new Color32(0, 0, 0, 0), elapsedTime / duration);
+                right.image.color = Color32.Lerp(right.image.color, new Color32(0, 0, 0, 0), elapsedTime / duration);
+                start.image.color = Color32.Lerp(start.image.color, new Color32(0, 0, 0, 0), elapsedTime / duration);
+                startText.color = Color32.Lerp(startText.color, new Color32(0, 0, 0, 0), elapsedTime / duration);
+                elapsedTime += Time.deltaTime;
+            }
+        }
 
     }
     public void Awake()
@@ -71,7 +108,11 @@ public class GameManager : MonoBehaviour
 
 
     }
-
+    public void Options()
+    {
+        options.SetActive(true);
+        isPaused = true;
+    }
     public void Quit()
     {
         Application.Quit();
@@ -85,8 +126,23 @@ public class GameManager : MonoBehaviour
         backtomenu.SetActive(false);
         gameover.SetActive(false);
         highScoreText.enabled = false;
+        Time.timeScale = 1.0f;
 
 
+    }
+
+    public void Pause()
+    {
+        pause.SetActive(true);
+        Time.timeScale = 0.0f;
+        isPaused = true;
+    }
+    public void Resume()
+    {
+        pause.SetActive(false);
+        options.SetActive(false);
+        Time.timeScale = 1.0f;
+        isPaused = false;
     }
     /* public void nss()
      {
@@ -109,6 +165,22 @@ public class GameManager : MonoBehaviour
          }
      }*/
 
+    public void ControlSettings(int id)
+    {
+        if (id == 0)
+        {
+
+            accel.enabled = false;
+            paddleControl.enabled = true;
+        }
+        else if (id == 1)
+        {
+            accel.enabled = true;
+            //paddleControl.enabled = false;
+            left.enabled = false;
+            right.enabled = false;
+        }
+    }
     public void UpdateScore()
     {
         score += 10;
@@ -119,9 +191,15 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.GetInt("highscores") < score)
         {
             Debug.Log("New HighScore!");
-            highScoreText.text = "HighScore " +"\n" + score.ToString();
+            highScoreText.text = "HighScore " + "\n" + score.ToString();
             PlayerPrefs.SetInt("highscores", score);
 
+        }
+        else
+        {
+            int hs = PlayerPrefs.GetInt("highscores");
+            highScoreText.text = "HighScore " + "\n" + hs.ToString();
+            Debug.Log("Highscore: " + PlayerPrefs.GetInt("highscores"));
         }
 
     }

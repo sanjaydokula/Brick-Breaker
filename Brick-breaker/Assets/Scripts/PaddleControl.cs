@@ -10,9 +10,11 @@ public class PaddleControl : MonoBehaviour
     public float leftEdge;
     public float rightEdge;
     [SerializeField]
-    private float speed=10;
+    private float speed = 12.0f;
     [SerializeField]
     private int lives = 3;
+    private float horizontal;
+    private int dd;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -24,18 +26,39 @@ public class PaddleControl : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void ButtonDown(int di)
+    {
+        if (di == 0)
+        {
+            horizontal = -1.0f;
+
+        }
+        else if (di == 1)
+        {
+            horizontal = 1.0f;
+        }
+    }
+    public void ButtonUp()
+    {
+        horizontal = 0;
+    }
     void Update()
     {
+        Debug.Log(horizontal);
         if (GameManager.Instance.isPaused == true)
         {
             ballRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
             return;
         }
+        else
+        {
+            ballRigidBody.constraints = RigidbodyConstraints2D.None;
+        }
 
         if (GameManager.Instance.gameover.activeSelf == false)
         {
 
-            float horizontal = Input.GetAxisRaw("Horizontal");
+            //horizontal = Input.GetAxisRaw("Horizontal");
             rigidbody.velocity = new Vector2(horizontal * speed, rigidbody.velocity.y);
         }
         if (ball.inPlay == false)
